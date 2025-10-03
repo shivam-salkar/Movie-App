@@ -17,12 +17,14 @@ const Search = () => {
   const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchMovies = async () => {
+  const fetchMovies = async (query = "") => {
     setIsLoading(true);
     setErrorMessage("");
 
     try {
-      const endPoint = `${API_BASE_URL}/discover/movie?sort_by=vote_count.desc`;
+      const endPoint = query
+        ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
+        : `${API_BASE_URL}/discover/movie?sort_by=vote_count.desc`;
 
       const response = await fetch(endPoint, API_OPTIONS);
 
@@ -32,13 +34,17 @@ const Search = () => {
 
       const data = await response.json();
 
-      if (!data.results) {
+      if (!data.results || data.results.length === 0) {
         setErrorMessage("No movies found");
         setMovieList([]);
         return;
       }
 
-      setMovieList(data.results);
+      const sortedMovies = data.results.sort(
+        (a, b) => b.popularity - a.popularity
+      );
+
+      setMovieList(sortedMovies);
     } catch (error) {
       console.error(`Error fetching movies: ${error}`);
       setErrorMessage(`Error Fetching Movies...`);
@@ -48,8 +54,12 @@ const Search = () => {
   };
 
   useEffect(() => {
-    fetchMovies();
-  }, []);
+    const delay = setTimeout(() => {
+      fetchMovies(searchTerm);
+    }, 500);
+
+    return () => clearTimeout(delay);
+  }, [searchTerm]);
 
   return (
     <div className="flex flex-col items-center text-3xl text-white w-full h-full bg-linear-to-b from-[#101828] to-[#1f3156] ">
