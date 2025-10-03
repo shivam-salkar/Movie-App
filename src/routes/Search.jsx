@@ -52,13 +52,13 @@ const Search = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center text-3xl text-white w-full h-full bg-linear-to-b from-[#101828] to-[#1f3156]">
-      <h2 className="text-gradient text-4xl m-10">
+    <div className="flex flex-col items-center text-3xl text-white w-full h-full bg-linear-to-b from-[#101828] to-[#1f3156] ">
+      <h2 className="text-gradient text-4xl m-10 animate-fade-up">
         Search through 3000+ movies online
       </h2>
 
       {/* Search Bar */}
-      <div className="flex flex-row items-center justify-center m-5 mt-10 bg-[#0F0D23] p-5 rounded-4xl w-[700px]">
+      <div className="flex flex-row items-center justify-center m-5 mt-10 bg-[#0F0D23] p-5 rounded-4xl w-[700px] animate-fade-up">
         <img
           src="./Search-Icon.svg"
           alt="Search Icon"
@@ -74,8 +74,8 @@ const Search = () => {
       </div>
 
       {/* MOVIE SECTION */}
-      <section className="all-movies flex flex-col items-center ">
-        <h2 className="mt-5">All Movies</h2>
+      <section className="all-movies flex flex-col items-center pb-30 p-10 animate-fade-up">
+        <h2 className="mt-5 ">All Movies</h2>
 
         {isLoading ? (
           <h1 className="text-white">Loading...</h1>

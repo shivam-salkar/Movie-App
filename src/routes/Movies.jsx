@@ -62,7 +62,7 @@ const Movies = () => {
   return (
     <section className="all-movies flex flex-col items-center bg-[#101828] text-white pb-30 p-10">
       {/* ALL TIME FAVOURITES */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center animate-fade-up">
         <h2 className="mt-10 p-5 text-5xl">All Time Favourites !</h2>
         <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {favouriteMovies.slice(0, 4).map((movie) => (
@@ -72,7 +72,7 @@ const Movies = () => {
       </div>
 
       {/* HOT AND TRENDING */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center animate-fade-up">
         <h2 className="mt-10 p-5 text-5xl">Hot and Trending !</h2>
         <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {trendingMovies.slice(0, 4).map((movie) => (
@@ -82,7 +82,7 @@ const Movies = () => {
       </div>
 
       {/* ROMANCE */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center animate-fade-up">
         <h2 className="mt-10 p-5 text-5xl">Top Romance !</h2>
         <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {romanceMovies.slice(0, 4).map((movie) => (
@@ -92,7 +92,7 @@ const Movies = () => {
       </div>
 
       {/* INDIAN MOVIES */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center animate-fade-up">
         <h2 className="mt-10 p-5 text-5xl">Top Indian Movies !</h2>
         <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {indianMovies.slice(0, 4).map((movie) => (
