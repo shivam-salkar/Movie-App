@@ -10,25 +10,25 @@ const Navbar = () => {
         </span>
       </Link>
 
-      <Link to="/" className='text-4xl font-thin text-white hover:underline-offset-1-'>
+      <Link to="/" className='text-4xl font-thin text-white hover:underline decoration-1 underline-offset-8 active:text-gradient'>
         <span>
           Home
         </span>
       </Link>
 
-      <Link to="/movies" className='text-4xl font-thin text-white'>
+      <Link to="/movies" className='text-4xl font-thin text-white hover:underline decoration-1 underline-offset-8 active:text-gradient'>
         <span>
           Movies
         </span>
       </Link>
 
-      <Link to="/about" className='text-4xl font-thin text-white'>
+      <Link to="/about" className='text-4xl font-thin text-white hover:underline decoration-1 underline-offset-8 active:text-gradient'>
         <span>
           About
         </span>
       </Link>
 
-      <Link to="/search" className='text-4xl font-thin text-white'>
+      <Link to="/search" className='text-4xl font-thin text-white hover:underline decoration-1 underline-offset-8 active:text-gradient'>
         <span>
           Search
         </span>
