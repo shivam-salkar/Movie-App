@@ -6,10 +6,10 @@ Live demo: https://movie-app-delta-eight-11.vercel.app
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
-![Search Page](screenshots/search.png)
-![Movies Page](screenshots/movies.png)
-![About Page](screenshots/about.png)
+![Home Page](screenshots/home.jpg)
+![Search Page](screenshots/search.jpg)
+![Movies Page](screenshots/movies.jpg)
+![About Page](screenshots/aboutjpg.jpg)
 
 
 ---
